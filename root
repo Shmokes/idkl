@@ -3,45 +3,80 @@
 /*! Powered by DiscordSelectors v0.2.7 */
 /* DEFAULT SETTINGS */
 :root {
-  --rgb-highlight: 4, 217, 255;
-  --highlight: rgb(var(--rgb-highlight));
-  --background: black;
-  --close-button: var(--dnd-color) !important;
-  --online-color: #39ff14;
-  --afk-color: #FFFF33;
-  --dnd-color: #FF0000;
-  --streaming-color: #bc13fe;
-  --rs-online-color: var(--online-color);
-  --rs-idle-color: var(--afk-color);
-  --rs-dnd-color: var(--dnd-color);
-  --rs-offline-color: gray;
-  --rs-invisible-color: gray;
-  --rs-streaming-color: var(--stream-color);
-  --interactive-hover: var(--highlight);
-  --interactive-active: var(--highlight);
-  --text-link: var(--highlight);
-  --bdfdb-blurple: var(--highlight);
-  --logo-primary: var(--highlight);
-  --focus-primary: var(--highlight);
-  --radio-group-dot-foreground: var(--highlight);
-  --scrollbar-thin-thumb: var(--highlight);
-  --scrollbar-auto-thumb: var(--highlight);
-  --scrollbar-auto-scrollbar-color-thumb: var(--highlight);
-  --scrollbar-thin-track: var(--background);
-  --scrollbar-auto-track: var(--background);
-  --scrollbar-auto-scrollbar-color-track: var(--background);
-  --activity-card-background: var(--background);
-  --background-primary: var(--background);
-  --background-mobile-primary: var(--background);
-  --background-secondary: var(--background);
-  --background-mobile-secondary: var(--background);
-  --background-secondary-alt: var(--background);
-  --background-tertiary: var(--background);
-  --background-accent: var(--background);
-  --background-floating: var(--background);
-  --channeltextarea-background: var(--background);
-  --textbox-markdown-syntax: var(--background);
-}
+  --main-color: #2780e6;
+  --hover-color: #1e63b3;
+  --success-color: #43b581;
+  --danger-color: #982929;
+  --channel-unread: var(--main-color);
+  --channel-color: rgba(255,255,255,0.3);
+  --muted-color: rgba(255,255,255,0.1);
+  --channel-text-selected: #fff;
+  --url-color: var(--main-color);
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --offline-color: #808080;
+  --streaming-color: #593695;
+  --main-font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace;
+  --font-display: var(--main-font);
+  --text-normal: rgb(220, 221, 222);
+  --text-muted: rgb(114, 118, 125);
+  --background-shading: 100%;
+  --background-overlay: rgba(0, 0, 0, .6);
+  --background-image: url(https://clearvision.gitlab.io/images/sapphire.jpg);
+  --background-position: center;
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --background-attachment: fixed;
+  --background-brightness: 100%;
+  --background-contrast: 100%;
+  --background-saturation: 100%;
+  --background-invert: 0%;
+  --background-grayscale: 0%;
+  --background-sepia: 0%;
+  --background-blur: 0px;
+  --backdrop-overlay: rgba(0, 0, 0, .8);
+  --backdrop-image: var(--background-image);
+  --backdrop-position: var(--background-position);
+  --backdrop-size: var(--background-size);
+  --backdrop-repeat: var(--background-repeat);
+  --backdrop-attachment: var(--background-attachment);
+  --backdrop-brightness: var(--background-brightness);
+  --backdrop-contrast: var(--background-contrast);
+  --backdrop-saturation: var(--background-saturation);
+  --backdrop-invert: var(--background-invert);
+  --backdrop-grayscale: var(--background-grayscale);
+  --backdrop-sepia: var(--background-sepia);
+  --backdrop-blur: var(--background-blur);
+  --user-popout-image: var(--background-image);
+  --user-popout-position: var(--background-position);
+  --user-popout-size: var(--background-size);
+  --user-popout-repeat: var(--background-repeat);
+  --user-popout-attachment: var(--background-attachment);
+  --user-popout-brightness: var(--background-brightness);
+  --user-popout-contrast: var(--background-contrast);
+  --user-popout-saturation: var(--background-saturation);
+  --user-popout-invert: var(--background-invert);
+  --user-popout-grayscale: var(--background-grayscale);
+  --user-popout-sepia: var(--background-sepia);
+  --user-popout-blur: calc(var(--background-blur) + 3px);
+  --user-popout-overlay: rgba(0, 0, 0, .65);
+  --user-modal-image: var(--background-image);
+  --user-modal-position: var(--background-position);
+  --user-modal-size: var(--background-size);
+  --user-modal-repeat: var(--background-repeat);
+  --user-modal-attachment: var(--background-attachment);
+  --user-modal-brightness: var(--background-brightness);
+  --user-modal-contrast: var(--background-contrast);
+  --user-modal-saturation: var(--background-saturation);
+  --user-modal-invert: var(--background-invert);
+  --user-modal-grayscale: var(--background-grayscale);
+  --user-modal-sepia: var(--background-sepia);
+  --user-modal-blur: calc(var(--background-blur) + 3px);
+  --home-icon: url(https://clearvision.gitlab.io/icons/discord.svg);
+  --home-position: center;
+  --home-size: 40px;
 }
 
 /* APP */
@@ -3243,148 +3278,6 @@ code {
 .modalTextContainer-ITvzbi {
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
-}
-
-/* MEMBERS */
-.membersWrap-2h-GB4 {
-  min-width: auto;
-  flex-basis: var(--members-width);
-}
-.membersWrap-2h-GB4 .members-1998pB {
-  width: var(--members-width);
-  background: rgba(0, 0, 0, calc(var(--background-shading) * .6));
-}
-.membersWrap-2h-GB4 .members-1998pB > div {
-  background-color: transparent;
-}
-
-.members-1998pB .membersGroup-v9BXpm {
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--main-color);
-  font-size: 11px;
-  font-weight: 700;
-  text-align: center;
-  transition: all 0.15s ease-in-out;
-  opacity: 0.85;
-}
-.members-1998pB [style*="color:"].membersGroup-v9BXpm {
-  opacity: 1;
-}
-.members-1998pB .membersGroup-v9BXpm:before {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to left, currentColor 50%, transparent);
-  margin-right: 5px;
-}
-.members-1998pB .membersGroup-v9BXpm:after {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to right, currentColor 50%, transparent);
-  margin-left: 5px;
-}
-.members-1998pB .member-3-YXUe {
-  background: transparent !important;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-.members-1998pB .member-3-YXUe.offline-3nJYBR .avatar-3uk_u9 {
-  filter: grayscale(100%) blur(1px);
-  transition: all 0.5s ease-in-out;
-}
-.members-1998pB .member-3-YXUe.offline-3nJYBR:hover .avatar-3uk_u9 {
-  filter: none;
-}
-.members-1998pB .member-3-YXUe .layout-2DM8Md {
-  position: relative;
-  background: transparent;
-  transition: all 0.15s ease-in-out, transform 0.1s ease-in-out;
-  z-index: 1;
-}
-.members-1998pB .member-3-YXUe .layout-2DM8Md:active {
-  transform: scale(0.9);
-}
-.members-1998pB .member-3-YXUe .roleColor-rz2vM0 {
-  max-width: 100%;
-  overflow: visible;
-  transition: all 0.15s ease-in-out;
-}
-.members-1998pB .member-3-YXUe .roleColor-rz2vM0:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.07) 90%, transparent);
-  border-radius: 3px;
-  opacity: 0;
-  transition: all 0.15s ease-in-out;
-  z-index: -1;
-  pointer-events: none;
-}
-.members-1998pB .member-3-YXUe .roleColor-rz2vM0:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 100%;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to right, var(--main-color) 90%, transparent);
-  border-radius: 3px;
-  opacity: 0.8;
-  transition: all 0.3s ease-in-out;
-  z-index: -1;
-  pointer-events: none;
-}
-.members-1998pB .member-3-YXUe [style*="color:"].roleColor-rz2vM0:before, .members-1998pB .member-3-YXUe [style*="color:"].roleColor-rz2vM0:after {
-  background: linear-gradient(to right, currentColor 90%, transparent);
-}
-.members-1998pB .member-3-YXUe:hover .roleColor-rz2vM0:before, .members-1998pB .member-3-YXUe.selected-aXhQR6 .roleColor-rz2vM0:before {
-  opacity: 1;
-}
-.members-1998pB .member-3-YXUe:hover [style*="color:"].roleColor-rz2vM0:before, .members-1998pB .member-3-YXUe.selected-aXhQR6 [style*="color:"].roleColor-rz2vM0:before {
-  opacity: 0.07;
-}
-.members-1998pB .member-3-YXUe.selected-aXhQR6 .roleColor-rz2vM0 {
-  -webkit-text-fill-color: #fff;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
-}
-.members-1998pB .member-3-YXUe.selected-aXhQR6 .roleColor-rz2vM0:after {
-  right: 0;
-}
-.members-1998pB .memberGroupsPlaceholder-3mwPub {
-  margin: 0 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 50%;
-  color: rgba(255, 255, 255, 0.3);
-}
-.members-1998pB .memberGroupsPlaceholder-3mwPub:before, .members-1998pB .memberGroupsPlaceholder-3mwPub:after {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-}
-.members-1998pB .memberGroupsPlaceholder-3mwPub:before {
-  background: linear-gradient(to left, currentColor 50%, transparent);
-  margin-right: calc(50% + 5px);
-  margin-left: -50%;
-}
-.members-1998pB .memberGroupsPlaceholder-3mwPub:after {
-  background: linear-gradient(to right, currentColor 50%, transparent);
-  margin-right: -50%;
-  margin-left: calc(50% + 5px);
-}
-.members-1998pB .memberGroupsPlaceholder-3mwPub,
-.members-1998pB .placeholderAvatar-damqh6,
-.members-1998pB .placeholderUsername-2B_OA9,
-.members-1998pB .mulitplePlaceholderUsername-pogq9I {
-  background: rgba(255, 255, 255, 0.3);
 }
 
 .ownerIcon-uZ6mE7 {
